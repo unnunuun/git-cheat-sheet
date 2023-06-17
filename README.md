@@ -11,8 +11,7 @@ git init
 ### Конфигурация пользователя
 
 ```bash
-git config --global init.defaultBranch <name>	# установка значения по умолчанию для имени ветки 
-						                        # при создании нового репозитория (например, master/main/trunk/development)
+git config --global init.defaultBranch <name>	# установка значения по умолчанию для имени ветки при создании нового репозитория (например, master/main/trunk/development)
 git config --global user.name "Your Name"
 git config --global user.email "youremail@example.com"
 ```
@@ -22,15 +21,13 @@ git config --global user.email "youremail@example.com"
 ### Работа с репозиторием
 
 ```bash
-git remote add <name> <repository-url>  # Добавить удаленный репозиторий,
-					                    # `<name>` - имя, которое вы выбираете для удаленного репозитория
+git remote add <name> <repository-url>  # Добавить удаленный репозиторий, `<name>` - имя, которое вы выбираете для удаленного репозитория
 git clone <repository-url>      	    # Клонировать репозиторий
 git status                      	    # Показать состояние рабочей директории
 git remote -v                   	    # Показать список удаленных репозиториев
 git add <file>                  	    # Добавить файл в индекс
 git commit -m "Commit Message"  	    # Зафиксировать изменения в репозитории
-git pull <name> <branch>      		    # Получить изменения с удаленного репозитория и объединить их с локальной веткой,
-					                    # `<branch>` - имя ветки, с которой вы хотите работать.
+git pull <name> <branch>      		    # Получить изменения с удаленного репозитория и объединить их с локальной веткой, `<branch>` - имя ветки, с которой вы хотите работать.
 git push <name> <branch>      		    # Отправить локальные изменения на удаленный репозиторий
 ```
 
