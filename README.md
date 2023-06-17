@@ -22,7 +22,7 @@ git config --global user.email "youremail@example.com"
 
 ```bash
 git remote add <name> <repository-url>  # Добавить удаленный репозиторий, `<name>` - имя, которое вы выбираете для удаленного репозитория
-git clone <repository-url>      	    # Клонировать репозиторий
+git clone <repository-url>              # Клонировать репозиторий
 git status                      	    # Показать состояние рабочей директории
 git remote -v                   	    # Показать список удаленных репозиториев
 git add <file>                  	    # Добавить файл в индекс
