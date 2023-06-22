@@ -87,13 +87,13 @@ flowchart LR
     C -- git add --> D
     D -- git commit --> E(Committed)
     E -- git checkout --> F(HEAD)
-    E -- git checkout <commit-hash> --> G(Detached HEAD)
-    F -- git reset --hard <commit-hash> --> H(Reset)
-    F -- git revert <commit-hash> --> I(Revert)
-    D -- git checkout -- \<file\> --> C
-    D -- git reset HEAD -- \<file\> --> C
-    E -- git restore --source \<commit-hash\> \<file\> --> C
-    G -- git checkout -b \<new-branch\> --> J(New Branch)
-    F -- git branch -d \<branch\> --> K(Delete Branch)
+    E -- [git checkout\n <commit-hash>] --> G(Detached HEAD)
+    F -- [git reset\n --hard <commit-hash>] --> H(Reset)
+    F -- [git revert\n <commit-hash>] --> I(Revert)
+    D -- [git checkout\n -- <file>] --> C
+    D -- git reset HEAD\n -- <file> --> C
+    E -- [git restore\n --source <commit-hash>] \<file\> --> C
+    G -- [git checkout\n -b new-branch>] --> J(New Branch)
+    F -- [git branch\n -d <branch>] --> K(Delete Branch)
 
 ```
