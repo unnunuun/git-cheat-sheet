@@ -106,11 +106,11 @@ graph LR
 * C -- git add --> D - добавление измененных файлов в индекс.  
 * D -- git commit --> E(Committed) - фиксация изменений в коммит с помощью команды "git commit".  
 * E -- git checkout --> F(HEAD) - перемещение указателя HEAD на последний коммит.  
-* E -- "git checkout <commit-hash>" --> G(Detached HEAD) - перемещение HEAD в режиме "Detached HEAD" на определенный коммит.  
-* F -- "git reset --hard <commit-hash>" --> H(Reset) - сброс рабочего каталога и индекса до указанного коммита с помощью команды "git reset --hard".  
-* F -- "git revert <commit-hash>" --> I(Revert) - создание нового коммита, который отменяет изменения, внесенные указанным коммитом, с помощью команды "git revert".  
-* D -- "git checkout --<file>" --> C - отмена изменений файла, не добавленного в индекс, с помощью команды "git checkout".  
-* D -- "git reset HEAD --<file>" --> C - удаление файла из индекса и отмена его изменений с помощью команды "git reset HEAD".  
-* E -- "git restore --source <commit-hash> <file>" --> C - восстановление файла из указанного коммита и отмена его изменений с помощью команды "git restore".  
-* G -- "git checkout -b <new-branch>" --> J(New Branch) - создание новой ветки на основе коммита, на котором находится "Detached HEAD", с помощью команды "git checkout -b".  
-* F -- "git branch -d <branch>" --> K(Delete Branch) - удаление ветки с помощью команды "git branch -d".  
+* E -- "git checkout &lt;commit-hash&gt;" --> G(Detached HEAD) - перемещение HEAD в режиме "Detached HEAD" на определенный коммит.  
+* F -- "git reset --hard &lt;commit-hash&gt;" --> H(Reset) - сброс рабочего каталога и индекса до указанного коммита с помощью команды "git reset --hard".  
+* F -- "git revert &lt;commit-hash&gt;" --> I(Revert) - создание нового коммита, который отменяет изменения, внесенные указанным коммитом, с помощью команды "git revert".  
+* D -- "git checkout --&lt;file&gt;" --> C - отмена изменений файла, не добавленного в индекс, с помощью команды "git checkout".  
+* D -- "git reset HEAD --&lt;file&gt;" --> C - удаление файла из индекса и отмена его изменений с помощью команды "git reset HEAD".  
+* E -- "git restore --source &lt;commit-hash&gt; &lt;file&gt;" --> C - восстановление файла из указанного коммита и отмена его изменений с помощью команды "git restore".  
+* G -- "git checkout -b &lt;new-branch&gt;" --> J(New Branch) - создание новой ветки на основе коммита, на котором находится "Detached HEAD", с помощью команды "git checkout -b".  
+* F -- "git branch -d &lt;branch&gt;" --> K(Delete Branch) - удаление ветки с помощью команды "git branch -d".  
