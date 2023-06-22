@@ -97,4 +97,20 @@ graph LR
     F -- git branch -d <branch> --> K(Delete Branch)
 ```
 
+#### Краткое описание каждого шага
 
+* A((Рабочий каталог)) - начальное состояние рабочего каталога.  
+* A --> B(Untracked) - файлы, которые не были отслежены Git.  
+* A --> C(Modified) - файлы, которые были изменены в рабочем каталоге.  
+* B -- git add --> D(Staged) - добавление файлов в индекс (staging area) с помощью команды "git add".  
+* C -- git add --> D - добавление измененных файлов в индекс.  
+* D -- git commit --> E(Committed) - фиксация изменений в коммит с помощью команды "git commit".  
+* E -- git checkout --> F(HEAD) - перемещение указателя HEAD на последний коммит.  
+* E -- "git checkout <commit-hash>" --> G(Detached HEAD) - перемещение HEAD в режиме "Detached HEAD" на определенный коммит.  
+* F -- "git reset --hard <commit-hash>" --> H(Reset) - сброс рабочего каталога и индекса до указанного коммита с помощью команды "git reset --hard".  
+* F -- "git revert <commit-hash>" --> I(Revert) - создание нового коммита, который отменяет изменения, внесенные указанным коммитом, с помощью команды "git revert".  
+* D -- "git checkout --<file>" --> C - отмена изменений файла, не добавленного в индекс, с помощью команды "git checkout".  
+* D -- "git reset HEAD --<file>" --> C - удаление файла из индекса и отмена его изменений с помощью команды "git reset HEAD".  
+* E -- "git restore --source <commit-hash> <file>" --> C - восстановление файла из указанного коммита и отмена его изменений с помощью команды "git restore".  
+* G -- "git checkout -b <new-branch>" --> J(New Branch) - создание новой ветки на основе коммита, на котором находится "Detached HEAD", с помощью команды "git checkout -b".  
+* F -- "git branch -d <branch>" --> K(Delete Branch) - удаление ветки с помощью команды "git branch -d".  
