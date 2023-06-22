@@ -80,20 +80,20 @@ git stash              # Сохранить незакоммиченные из�
 * Tracked: Файлы в которых Git так или иначе отслеживает изменения.
 
 ```mermaid
-graph LR
+  graph LR
     A((Рабочий каталог)) --> B(Untracked)
     A --> C(Modified)
     B -- git add --> D(Staged)
     C -- git add --> D
     D -- git commit --> E(Committed)
     E -- git checkout --> F(HEAD)
-    E -- [git checkout <commit-hash>] --> G(Detached HEAD)
-    F -- [git reset --hard <commit-hash>] --> H(Reset)
-    F -- [git revert <commit-hash>] --> I(Revert)
-    D -- [git checkout -- <file>] --> C
-    D -- git reset HEAD -- <file> --> C
-    E -- [git restore --source <commit-hash>] \<file\> --> C
-    G -- [git checkout -b new-branch>] --> J(New Branch)
-    F -- [git branch -d <branch>] --> K(Delete Branch)
+    E -- git checkout &lt;commit-hash&gt; --> G(Detached HEAD)
+    F -- git reset --hard &lt;commit-hash&gt; --> H(Reset)
+    F -- git revert &lt;commit-hash&gt; --> I(Revert)
+    D -- git checkout -- &lt;file&gt; --> C
+    D -- git reset HEAD -- &lt;file&gt; --> C
+    E -- git restore --source &lt;commit-hash&gt; &lt;file&gt; --> C
+    G -- git checkout -b &lt;new-branch&gt; --> J(New Branch)
+    F -- git branch -d &lt;branch&gt; --> K(Delete Branch)
 
 ```
