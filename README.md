@@ -83,16 +83,16 @@ git stash              # Сохранить незакоммиченные из�
 flowchart LR
     A((Рабочий каталог)) --> B(Untracked)
     A --> C(Modified)
-    B -- |git add| --> D(Staged)
-    C -- |git add| --> D
-    D -- |git commit| --> E(Committed)
-    E -- |git checkout| --> F(HEAD)
-    E -- |git checkout <commit-hash>| --> G(Detached HEAD)
-    F -- |git reset --hard <commit-hash>| --> H(Reset)
-    F -- |git revert <commit-hash>| --> I(Revert)
-    D -- |git checkout -- <file>| --> C
-    D -- |git reset HEAD -- <file>| --> C
-    E -- |git restore --source <commit-hash> <file>| --> C
-    G -- |git checkout -b <new-branch>| --> J(New Branch)
-    F -- |git branch -d <branch>| --> K(Delete Branch)
+    B --> |git add| D(Staged)
+    C --> |git add| D
+    D --> |git commit| E(Committed)
+    E --> |git checkout| F(HEAD)
+    E --> |git checkout <commit-hash>| G(Detached HEAD)
+    F --> |git reset --hard <commit-hash>| H(Reset)
+    F --> |git revert <commit-hash>| I(Revert)
+    D --> |git checkout -- <file>| C
+    D --> |git reset HEAD -- <file>| C
+    E --> |git restore --source <commit-hash> <file>| C
+    G --> |git checkout -b <new-branch>| J(New Branch)
+    F --> |git branch -d <branch>| K(Delete Branch)
 ```
