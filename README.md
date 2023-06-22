@@ -95,5 +95,4 @@ graph LR
     E -- git restore --source &lt;commit-hash&gt; &lt;file&gt; --> C
     G -- git checkout -b &lt;new-branch&gt; --> J(New Branch)
     F -- git branch -d &lt;branch&gt; --> K(Delete Branch)
-
 ```
